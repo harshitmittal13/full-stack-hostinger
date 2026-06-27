@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("https://full-stack-hostinger-805b.onrender.com/api/message")
+    fetch(`${import.meta.env.VITE_API}/api/message`)
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
